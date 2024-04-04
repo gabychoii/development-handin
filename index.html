@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Development Handin</title>
+        <link rel="stylesheet" href="styles.css" /> 
+    </head>
+    <body>
+        <hr id="divider">
+        <div class="about"> 
+            <div id="class">CSCI 1300</div>
+        </div>
+        <hr id="divider">
+        <div id="project-name">Development</div>
+        <hr id="divider-thin">
+        <hr id="divider">
+            <div id="project-section">00 - Assignment Overview</div>
+        <hr id="bottom-divider">
+        <div class="block-3">
+            <div class="card" id="round"> 
+                <div class="card-title">Contents</div>
+                <div class="card-body">
+                    <div id="menu-item">00 - Overview</div>
+                    <div id="menu-item">01 - Website Selection</div>
+                    <div id="menu-item">02 - Website Comparison</div>
+                    <div id="menu-item">03 - Feature Analysis + Design Choices</div>
+                    <div id="menu-item">04 - Choosing a Theme</div>
+                    <div id="menu-item">05 - Conclusion</div>
+                </div>
+            </div>
+            <div class="card" id="round">
+                <div class="card-title">Goal</div>
+                <div class="card-body">
+                    The goal of this assigment was to create a simple, functional aggregator interface using React. More specifically, we
+                    were given creative liberty in design to encourage the practice of competitive analysis amongst various existing 
+                    aggregator interfaces of choice.
+                </div>
+            </div>
+            <div class="card" id="round">
+                <div class="card-title">Challenges</div>
+                <div class="card-body">
+                    On first impression, this seemed like a challenging assigment on two fronts. First, critical analysis of websites through the 
+                    perspective of strong design principles, rather than an everyday user. Secondly, it was evident that this project required
+                    a higher level of planning and organization than prior projects, with a heavier focus on component relationships.
+                </div>
+            </div>
+        </div>
+        <hr id="divider">
+            <div id="project-section">01 - Website Selection</div>
+        <hr id="bottom-divider">
+                <div id="section-description">
+                    GOAL: Select at least 3 different websites with a favoriting function. 
+                    Take a look at how they organize information that is pertinent to the user and how they utilize aggregators.
+                    <a href="https://cooking.nytimes.com/" class="text">Website 1: New York Times Cooking</a>
+                    <img class="project-image" alt="NYT Cooking Homepage" src="./assets/nytcooking.png"/>
+
+                    <!-- <div class="card-dark">
+                        <div class="card-title">Key Features</div>
+                        <div class="card-body">
+                            <div id="menu-item" ></div>
+                        </div>
+                    </div> -->
+                    <a href="https://www.depop.com/" class="text">Website 2: Depop</a>
+                    <img class="project-image" alt="Depop Search Page" src="./assets/depop.png"/>
+                    <!-- <div class="card-dark">
+                        <div class="card-title">Notes</div>
+                        <div class="card-body">
+                            <div id="menu-item" >Change 01 - Added doctor name to top, as this is one of the main factors to consider when searching for appointments</div>
+                            <div id="menu-item" >Change 02 - Changed font to black, to make contrast from white background larger and emphasize compared to other gray information on the page</div>
+                            <div id="menu-item" >Change 03 - Changed color of buttons, and emphasized the importance of the "Schedule" button by making the color darker</div>
+                            <div id="menu-item" >Change 04 - Changed the layout of the buttons to a row format, to visually indicate the division between appointment sections </div>
+                        </div>
+                    </div> -->
+                    <a href="https://www.pinterest.com/homefeed/" class="text">Website 3: Pinterest</a>
+                    <img class="project-image" alt="Pinterest Home Page" src="./assets/pinterest.png"/>
+                        
+    </div>
+        <hr id="divider">
+            <div id="project-section">02 - Comparative Analysis</div>
+        <hr id="bottom-divider">
+        <div id="section-description">
+            GOAL: For each website, observe how they sort and filter information in their favoriting function. 
+            How do these decisions impact the user? What works well on this page and what doesn’t? 
+        </div>
+        <div id="comparison-table">
+            <table id="table">
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>NYT Cooking</td>
+                  <td>Depop</td>
+                  <td>Pinterest</td>
+                </tr>
+                <tr>
+                    <td>“Similar” Products Feature</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                  </tr>
+                <tr>
+                <tr>
+                    <td>Favoriting button available on home feed</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>Favoriting function available upon hovering over card</td>
+                    <td></td>
+                    <td></td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td>Items “tagged” with characteristics/filter keywords</td>
+                    <td>X (filter category)</td>
+                    <td>X (brand)</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Ability to "favorite" (aggregate) into multiple lists</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td>Cards aligned in a row format</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Notification once item is favorited</td>
+                    <td></td>
+                    <td></td>
+                    <td>X</td>
+                </tr>
+              </table>
+        </div> 
+
+        <div id="text-general">
+            <div class="card-title">Comparative Analysis of Website Features</div>
+            Through conducting an analysis of these three sites, I concluded that although they all share the very basic concept of 
+            favoriting or saving an item, each has slight but impactful differences that affect a user’s interaction with the favorite function. 
+            All sites presented their list items in the form of cards with a variation of information beneath the card. However, this is where they started to differ 
+            - regarding the user action of favoriting the item itself, Pinterest requires a user to hover over the card, whereas Depop and NYT have the “favorite”  
+            button directly on the card itself. Next, after an item is favorited, all three sites change the color of the favorite button (principle of contrast) 
+            to indicate a successful save, but only Pinterest has a direct notification. NYT and Depop’s favoriting-related design factors  are likely more successful 
+            than Pinterest, because these sites both display cards in rows, with a descriptor of each row above (satisfying Gestalt’s principle of proximity). On the other hand, 
+            Pinterest displays its cards to fill in open spaces vertically - due to the fact that the card size adjusts to the size of the image, this results in a column-oriented 
+            layout (going against the “Z scan pattern”). Lastly, between NYT and Depop, it appears that NYT may be more successful, as it uses category tags, various fonts, and color 
+            coding to differentiate various item categories.
+        </div>
+        <div id="text-general">
+            <div class="card-title">[Reflection]</div>
+            This competitive analysis excersize helped make the overall task less daunting - it helped me understand that "good design" can be broken into a combination of
+            simpler components that can be recreated more easily. Splitting the overarching task into smaller goals was effective in helping me analyze and understand the various
+            design choices made by each company.
+        </div>
+
+        <hr id="divider">
+            <div id="project-section">03 - Feature Analysis + Design Choices </div>
+        <hr id="bottom-divider">
+        <div id="section-description">
+            Given these reflections, how would you implement your own list-based interface? What factors and designs would you like to implement based on what worked well and what didn’t? 
+        </div>
+        <div class="block-3">
+            <div class="card-transparent">
+                <div class="card-title">Gestalt Proximity</div>
+                <img class="nested-image" alt="NYT Cooking, home page" src="./assets/gestalt.png"/>
+                <div class="card-body">
+                    <div id="card-item">Case: NYT Cooking's gouping by rows</div>
+                </div>
+                <div class="card-title">Simple Interface</div>
+                <img class="nested-image" alt="Website, after design change" src="./assets/clean.png"/>
+                <div class="card-body">
+                    <div id="card-item">Case: Pinterest's minimalist layout, not overly crowded with white space</div>
+                </div>
+            </div>
+            <div class="card-transparent"> 
+                <div class="card-title">Contrasting Colors</div>
+                <img class="nested-image" alt="NYT Cooking, contrasting colors" src="./assets/contrast.png"/>
+                <div class="card-body">
+                    <div id="card-item">Case: NYT Cooking's use of bright, contrasting colors against a white background</div>
+                </div>
+                <div class="card-title">Card Tags</div>
+                <img class="nested-image" alt="Website, after design change" src="./assets/cardtag.png"/>
+                <div class="card-body">
+                    <div id="card-item">Case: NYT Cooking's use of card tags to categorize item cards</div>
+                </div>
+            </div>
+
+            <div class="card-transparent"> 
+                <div class="card-title">Symbol Usage</div>
+                <img class="nested-image" alt="Depop, favorite symbol" src="./assets/symbols.png"/>
+                <div class="card-body">
+                    <div id="card-item">Case: Depop's usage of symbols to represent universal functions such as "favoriting"</div>
+                </div>
+                <div class="card-title">Tags</div>
+                <img class="nested-image" alt="NYT Cooking, tags to organize information visually" src="./assets/tags.png"/>
+                <div class="card-body">
+                    <div id="card-item">Case: NYT Cooking's use of card tags to categorize item cards</div>
+                </div>
+            </div>
+
+            <div id="text-general">
+                <div class="card-title">Design Reflection</div>
+                The above design choices were patterns shared amongst these three websites that stood out to me because they contributed to the
+                clean, but functional appearance and usage of each website. These are elements I aimed to include in my own design. 
+            </div>   
+            
+        </div>
+        <hr id="divider">
+            <div id="project-section">04 - Choosing a Theme</div>
+            <hr id="bottom-divider">
+            <div id="section-description">
+                Pick a theme that can make use of lists AND an aggregator. For whichever theme you pick,
+                 think about how you can make use of props, components, and states to display and process data.
+            </div>
+            <div id="text-general">
+                <div class="card-title">Theme: Movie Watchlist</div>
+                When brainstorming themes that would fit the above criteria, I took the approach of thinking of lists that are useful
+                to me, and came up with the idea of a Movie Watchlist theme. Watching movies is one of my biggest hobbies, and I feel that
+                I always have a large list of movies that I want to watch, and often forget as it isn't written down anywhere. 
+            </div>
+            <div id="text-general">
+                <div class="card-title">Meeting the Criteria</div>
+                The list requirement is satisfied through the list of movies displayed in cards. The movies are aggregated with the "Add to watchlist +" 
+                button to a separate watchlist. They can be filtered by theme and language, and sorted by release year (ascending or descending). The watchlist 
+                can additionally be reset. Given the assignment requirements and the inspiration I drew from the competitive analysis exercise, I hand-sketched 
+                the following prototype:
+                <img class="nested-image" alt="Prototype sketch" src="./assets/sketch.png"/>    
+            </div>
+        <hr id="divider">
+            <div id="project-section">05 - Conclusion </div>
+        <hr id="bottom-divider">
+            <div id="text-general">
+                <div class="card-title">Project Conclusion + Reflection</div>
+                Overall, I found this project to be very rewarding and not as intimidating as I had originally imagined. I feel that I was able to get a better grasp
+                of the front-end design concepts I learned in 32, and use past projects from 32 and this class to create a functional aggregator interface. Personally, this further
+                reafirmed my preference for front-end design and analysis as opposed to back-end, and taught me to think of front-end from a more technical standpoint technical
+                before. 
+            </div> 
+        <hr id="bottom-divider">
+            
+            </body>
+</html>
